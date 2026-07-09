@@ -1,0 +1,16 @@
+{
+  "name": "Ribeiro Soares Advogados",
+  "short_name": "Ribeiro Soares",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#D4AF37",
+  "description": "Escritório de advocacia especializado em Direito do Trabalho.",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

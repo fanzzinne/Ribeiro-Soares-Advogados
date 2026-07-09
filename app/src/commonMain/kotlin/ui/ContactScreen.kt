@@ -1,8 +1,5 @@
 package com.example.ribeirosoaresadvogados.ui
 
-import android.content.Context
-import android.content.Intent
-import android.net.Uri
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
@@ -48,7 +45,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -58,7 +54,6 @@ import androidx.compose.ui.unit.sp
 fun ContactScreen(
     onBack: () -> Unit
 ) {
-    val context = LocalContext.current
     var name by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
     var phone by remember { mutableStateOf("") }
@@ -135,7 +130,7 @@ fun ContactScreen(
                 
                 // WhatsApp Button
                 Button(
-                    onClick = { openWhatsApp(context) },
+                    onClick = { /* Platform specific action */ },
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(64.dp),
@@ -247,12 +242,4 @@ fun LuxuryTextField(
         shape = RoundedCornerShape(12.dp),
         singleLine = singleLine
     )
-}
-
-fun openWhatsApp(context: Context) {
-    val number = "5511999999999" // Example number
-    val url = "https://api.whatsapp.com/send?phone=$number"
-    val intent = Intent(Intent.ACTION_VIEW)
-    intent.data = Uri.parse(url)
-    context.startActivity(intent)
 }
