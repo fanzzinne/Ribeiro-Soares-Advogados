@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ribeiro Soares Advogados - Direito do Trabalho</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#D4AF37">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+
+        :root {
+            --deep-black: #0A0A0A;
+            --brushed-gold: #D4AF37;
+            --dark-gold: #B8860B;
+            --soft-white: #F5F5F5;
+        }
+
+        body {
+            background-color: var(--deep-black);
+            color: var(--soft-white);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        h1, h2, h3, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .gold-gradient {
+            background: linear-gradient(135deg, var(--brushed-gold), var(--dark-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-gold {
+            background: linear-gradient(135deg, var(--brushed-gold), var(--dark-gold));
+        }
+
+        .gold-border {
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .shimmer {
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(to bottom, rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.9)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b gold-border">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-scale-balanced text-3xl text-[#D4AF37]"></i>
+                <span class="text-xl font-bold tracking-widest gold-gradient uppercase">Ribeiro Soares</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold tracking-wider">
+                <a href="#inicio" class="hover:text-[#D4AF37] transition-colors uppercase">Início</a>
+                <a href="#sobre" class="hover:text-[#D4AF37] transition-colors uppercase">Sócios</a>
+                <a href="#servicos" class="hover:text-[#D4AF37] transition-colors uppercase">Especialidades</a>
+                <a href="#contato" class="hover:text-[#D4AF37] transition-colors uppercase">Contato</a>
+            </div>
+            <a href="https://wa.me/5511999999999" class="bg-gold px-6 py-2 rounded-full text-black font-bold text-xs hover:scale-105 transition-transform uppercase tracking-tighter">
+                Consulta Grátis
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="max-w-4xl text-center">
+            <p class="text-[#D4AF37] tracking-[0.5em] mb-6 text-sm font-light uppercase animate-pulse">Soluções Jurídicas de Elite</p>
+            <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">Excelência em <span class="gold-gradient">Direito do Trabalho</span></h1>
+            <p class="text-gray-400 text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
+                Defendendo seus direitos com a autoridade e o prestígio que você merece. Especialistas em causas de alta complexidade.
+            </p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                <a href="#servicos" class="bg-gold px-10 py-4 rounded-xl text-black font-bold hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all">
+                    NOSSOS SERVIÇOS
+                </a>
+                <a href="#contato" class="border border-[#D4AF37] text-white px-10 py-4 rounded-xl font-bold hover:bg-[#D4AF37]/10 transition-all">
+                    FALE CONOSCO
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <div class="bg-black py-16 gold-border border-y">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <p class="text-4xl font-bold text-[#D4AF37] mb-2 font-serif">25+</p>
+                <p class="text-xs text-gray-500 tracking-widest uppercase">Anos de Experiência</p>
+            </div>
+            <div>
+                <p class="text-4xl font-bold text-[#D4AF37] mb-2 font-serif">98%</p>
+                <p class="text-xs text-gray-500 tracking-widest uppercase">Taxa de Sucesso</p>
+            </div>
+            <div>
+                <p class="text-4xl font-bold text-[#D4AF37] mb-2 font-serif">1000+</p>
+                <p class="text-xs text-gray-500 tracking-widest uppercase">Casos Vencidos</p>
+            </div>
+            <div>
+                <p class="text-4xl font-bold text-[#D4AF37] mb-2 font-serif">24/7</p>
+                <p class="text-xs text-gray-500 tracking-widest uppercase">Suporte Jurídico</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Practice Areas -->
+    <section id="servicos" class="py-24 px-6 bg-[#0F0F0F]">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <h2 class="text-[#D4AF37] text-sm tracking-widest mb-4 uppercase">Áreas de Atuação</h2>
+            <p class="text-4xl font-bold">Especialidades Jurídicas</p>
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-[#1A1A1A] p-10 rounded-3xl border gold-border hover:scale-[1.02] transition-all group cursor-default">
+                <div class="w-14 h-14 bg-gold rounded-2xl flex items-center justify-center mb-8 shadow-[0_10px_20px_rgba(212,175,55,0.2)]">
+                    <i class="fas fa-file-signature text-black text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 group-hover:text-[#D4AF37] transition-colors">Rescisão de Contrato</h3>
+                <p class="text-gray-400 leading-relaxed">Análise detalhada de verbas rescisórias, FGTS, férias e multas por atraso.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-[#1A1A1A] p-10 rounded-3xl border gold-border hover:scale-[1.02] transition-all group cursor-default">
+                <div class="w-14 h-14 bg-gold rounded-2xl flex items-center justify-center mb-8 shadow-[0_10px_20px_rgba(212,175,55,0.2)]">
+                    <i class="fas fa-clock text-black text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 group-hover:text-[#D4AF37] transition-colors">Horas Extras</h3>
+                <p class="text-gray-400 leading-relaxed">Cálculo e cobrança de jornadas excedentes, intervalos e adicional noturno.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-[#1A1A1A] p-10 rounded-3xl border gold-border hover:scale-[1.02] transition-all group cursor-default">
+                <div class="w-14 h-14 bg-gold rounded-2xl flex items-center justify-center mb-8 shadow-[0_10px_20px_rgba(212,175,55,0.2)]">
+                    <i class="fas fa-briefcase-medical text-black text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 group-hover:text-[#D4AF37] transition-colors">Acidente de Trabalho</h3>
+                <p class="text-gray-400 leading-relaxed">Indenizações por danos físicos e morais decorrentes de doenças ocupacionais.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners -->
+    <section id="sobre" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="aspect-[4/5] rounded-3xl overflow-hidden border gold-border">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Dr. Ricardo" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-8 -right-8 bg-gold p-8 rounded-3xl text-black hidden md:block">
+                    <p class="text-3xl font-serif font-bold">20+</p>
+                    <p class="text-xs font-bold uppercase tracking-widest">Anos no Direito</p>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-[#D4AF37] text-sm tracking-widest mb-4 uppercase">Nossos Sócios</h2>
+                <h3 class="text-4xl font-bold mb-8">Liderança de Prestígio</h3>
+                <div class="space-y-8">
+                    <div class="bg-[#1A1A1A] p-6 rounded-2xl border gold-border">
+                        <p class="text-xl font-bold text-[#D4AF37]">Dr. Ricardo Ribeiro</p>
+                        <p class="text-sm text-gray-400 mb-4">Sócio Sênior • Especialista em Dissídios Coletivos</p>
+                        <p class="text-gray-300 leading-relaxed">Referência em negociações de alta complexidade, pautado pela ética e busca incessante pela justiça social.</p>
+                    </div>
+                    <div class="bg-[#1A1A1A] p-6 rounded-2xl border gold-border">
+                        <p class="text-xl font-bold text-[#D4AF37]">Dra. Letícia Soares</p>
+                        <p class="text-sm text-gray-400 mb-4">Sócia Fundadora • Especialista em Rescisão Indireta</p>
+                        <p class="text-gray-300 leading-relaxed">Coordena o núcleo de atendimento ao trabalhador, garantindo suporte humanizado e resultados expressivos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-24 px-6 bg-[#0F0F0F]">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-5xl font-bold mb-8">Entre em <span class="gold-gradient">Contato</span></h2>
+                <p class="text-gray-400 mb-12 text-lg leading-relaxed">
+                    Estamos prontos para analisar seu caso. Envie uma mensagem e receba um atendimento personalizado.
+                </p>
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-full border gold-border flex items-center justify-center">
+                            <i class="fas fa-phone text-[#D4AF37]"></i>
+                        </div>
+                        <span>+55 (11) 99999-9999</span>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-full border gold-border flex items-center justify-center">
+                            <i class="fas fa-envelope text-[#D4AF37]"></i>
+                        </div>
+                        <span>contato@ribeirosoares.adv.br</span>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-full border gold-border flex items-center justify-center">
+                            <i class="fas fa-location-dot text-[#D4AF37]"></i>
+                        </div>
+                        <span>Av. Paulista, 1000 - São Paulo, SP</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-[#1A1A1A] p-8 md:p-12 rounded-[2.5rem] border gold-border shadow-2xl relative overflow-hidden">
+                <div class="shimmer absolute inset-0 opacity-5 pointer-events-none"></div>
+                <form class="space-y-6 relative z-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-xs uppercase tracking-widest text-gray-500 font-bold">Nome Completo</label>
+                            <input type="text" class="w-full bg-black/50 border gold-border rounded-xl px-4 py-4 focus:border-[#D4AF37] outline-none transition-all" placeholder="Seu nome">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs uppercase tracking-widest text-gray-500 font-bold">E-mail</label>
+                            <input type="email" class="w-full bg-black/50 border gold-border rounded-xl px-4 py-4 focus:border-[#D4AF37] outline-none transition-all" placeholder="exemplo@email.com">
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs uppercase tracking-widest text-gray-500 font-bold">Assunto</label>
+                        <select class="w-full bg-black/50 border gold-border rounded-xl px-4 py-4 focus:border-[#D4AF37] outline-none transition-all appearance-none">
+                            <option>Rescisão de Contrato</option>
+                            <option>Horas Extras</option>
+                            <option>Assédio Moral</option>
+                            <option>Outros</option>
+                        </select>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs uppercase tracking-widest text-gray-500 font-bold">Mensagem</label>
+                        <textarea class="w-full bg-black/50 border gold-border rounded-xl px-4 py-4 h-32 focus:border-[#D4AF37] outline-none transition-all" placeholder="Descreva brevemente o seu caso..."></textarea>
+                    </div>
+                    <button class="w-full bg-gold py-5 rounded-2xl text-black font-black tracking-widest hover:scale-[1.01] active:scale-95 transition-all">
+                        ENVIAR MENSAGEM
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t gold-border text-center">
+        <p class="text-gray-500 text-sm">© 2026 Ribeiro Soares Advogados. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/5511999999999" target="_blank" class="fixed bottom-8 right-8 bg-[#25D366] w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition-transform z-50">
+        <i class="fab fa-whatsapp text-white"></i>
+    </a>
+
+    <script>
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js');
+            });
+        }
+    </script>
+</body>
+</html>
