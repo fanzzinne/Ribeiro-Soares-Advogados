@@ -1,4 +1,4 @@
-const CACHE_NAME = 'rs-advogados-v1';
+const CACHE_NAME = 'rs-luxury-v1';
 const ASSETS = [
   'index.html',
   'manifest.json'
