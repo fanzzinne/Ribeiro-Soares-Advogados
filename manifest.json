@@ -3,14 +3,15 @@
   "short_name": "RS Advogados",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#050505",
-  "theme_color": "#B8860B",
-  "description": "Escritório de advocacia premium especializado em Direito do Trabalho de alta complexidade.",
+  "background_color": "#000000",
+  "theme_color": "#c5a059",
+  "description": "Escritório de advocacia premium especializado em Direito do Trabalho.",
   "icons": [
     {
-      "src": "https://cdn-icons-png.flaticon.com/512/3135/3135706.png",
-      "sizes": "512x512",
-      "type": "image/png"
+      "src": "assets/img/logo.png.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
