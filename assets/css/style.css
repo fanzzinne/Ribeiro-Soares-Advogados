@@ -21,8 +21,16 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #000;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efeito de fundo fixo */
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     padding: 0;
@@ -32,13 +40,14 @@ body {
 .serif { font-family: 'Cormorant Garamond', serif; }
 .logo-font { font-family: 'Cinzel', serif; }
 
-/* Bloco Unificado (Frame) - Expandido para preencher a tela */
+/* Bloco Unificado (Frame) - Transparência ajustada para ver o fundo */
 .section-block {
     width: 100%;
     max-width: 100%;
     margin: 0;
     border: none;
-    background-color: var(--bg-dark);
+    background-color: rgba(5, 5, 5, 0.6); /* Semi-transparente */
+    backdrop-filter: blur(5px); /* Efeito de vidro fosco para luxo */
     position: relative;
     overflow: hidden;
 }
@@ -48,7 +57,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 60px;
+    padding: 30px 80px; /* Alinhado com o padding do Hero e Metrics */
     position: absolute;
     width: 100%;
     z-index: 100;
@@ -77,7 +86,11 @@ nav ul li a {
     opacity: 0.7;
 }
 
-nav ul li a:hover, nav ul li a.active { color: var(--gold); opacity: 1; }
+/* Estilo para links ativos no menu */
+nav ul li a.active {
+    color: var(--gold) !important;
+    opacity: 1;
+}
 
 .btn-consultation {
     border: 1px solid var(--gold);
@@ -95,14 +108,14 @@ nav ul li a:hover, nav ul li a.active { color: var(--gold); opacity: 1; }
 
 /* SEÇÃO 1: HERO */
 .hero {
-    min-height: 90vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+    min-height: calc(100vh - 110px); /* Ajustado para empurrar as métricas exatamente para o rodapé da tela */
+    background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.8) 100%),
                 url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
-    padding: 100px 80px 60px 80px;
+    padding: 80px 80px 40px 80px;
     position: relative;
 }
 
@@ -189,25 +202,36 @@ nav ul li a:hover, nav ul li a.active { color: var(--gold); opacity: 1; }
 
 .practice-list { list-style: none; }
 .practice-list li {
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding: 20px 0; /* Aumentado para melhor respiro */
+    border-bottom: 1px solid rgba(255,255,255,0.08);
     display: flex;
     align-items: center;
-    gap: 15px;
-    font-size: 13px;
-    color: #eee;
+    gap: 20px; /* Aumentado para alinhar com o modelo */
+    font-size: 14px;
+    color: #fff;
     cursor: pointer;
     transition: 0.3s;
 }
-.practice-list li:hover { color: var(--gold); padding-left: 8px; }
-.practice-list li i { color: var(--gold); font-size: 14px; width: 20px; text-align: center; }
+
+.practice-list li:hover {
+    color: var(--gold);
+    padding-left: 5px;
+    background: rgba(255, 255, 255, 0.02);
+}
+.practice-list li i {
+    color: var(--gold);
+    font-size: 14px;
+    min-width: 25px; /* Largura fixa para alinhar o texto */
+    text-align: center;
+    display: inline-block;
+}
 
 .view-all-link, .view-all-link:visited {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 35px;
-    color: var(--gold);
+    margin-top: 40px; /* Mais espaço para o link final */
+    color: var(--gold) !important;
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -224,7 +248,7 @@ nav ul li a:hover, nav ul li a.active { color: var(--gold); opacity: 1; }
 .metrics-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 50px 80px;
+    padding: 30px 80px; /* Reduzido de 50px para 30px */
     background-color: #080808;
     border-top: 1px solid var(--border-color);
 }
@@ -300,10 +324,11 @@ nav ul li a:hover, nav ul li a.active { color: var(--gold); opacity: 1; }
 }
 
 .contact-left h2 {
-    font-size: 48px;
+    font-size: 38px;
     text-transform: uppercase;
     margin-bottom: 30px;
-    line-height: 1.1;
+    line-height: 1;
+    white-space: nowrap;
 }
 .contact-left .p-text { color: #888; margin-bottom: 50px; font-size: 15px; }
 
