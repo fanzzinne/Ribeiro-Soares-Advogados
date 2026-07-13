@@ -7,12 +7,21 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.EmojiEvents
+import androidx.compose.material.icons.rounded.Gavel
+import androidx.compose.material.icons.rounded.Star
+import androidx.compose.material.icons.rounded.SupportAgent
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -24,37 +33,46 @@ fun TrustIndicators(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .padding(vertical = 32.dp),
-        horizontalArrangement = Arrangement.SpaceEvenly,
+            .padding(vertical = 48.dp, horizontal = 80.dp),
+        horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        IndicatorItem(number = "25+", label = "ANOS DE EXPERIÊNCIA")
-        IndicatorItem(number = "98%", label = "TAXA DE SUCESSO")
-        IndicatorItem(number = "1000+", label = "CASOS VENCIDOS")
-        IndicatorItem(number = "24/7", label = "SUPORTE JURÍDICO")
+        IndicatorItem(Icons.Rounded.Star, "25+", "ANOS DE EXPERIÊNCIA")
+        IndicatorItem(Icons.Rounded.EmojiEvents, "98%", "TAXA DE SUCESSO")
+        IndicatorItem(Icons.Rounded.Gavel, "1000+", "CASOS VENCIDOS")
+        IndicatorItem(Icons.Rounded.SupportAgent, "24/7", "SUPORTE JURÍDICO")
     }
 }
 
 @Composable
 fun IndicatorItem(
+    icon: ImageVector,
     number: String,
     label: String
 ) {
-    Column(
-        horizontalAlignment = Alignment.CenterHorizontally
+    Row(
+        verticalAlignment = Alignment.CenterVertically
     ) {
-        Text(
-            text = number,
-            style = MaterialTheme.typography.headlineLarge,
-            color = MaterialTheme.colorScheme.primary,
-            fontWeight = FontWeight.ExtraBold
+        Icon(
+            imageVector = icon,
+            contentDescription = null,
+            tint = Color(0xFFD4AF37),
+            modifier = Modifier.size(32.dp)
         )
-        Spacer(modifier = Modifier.height(4.dp))
-        Text(
-            text = label,
-            style = MaterialTheme.typography.labelSmall,
-            color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f),
-            letterSpacing = 1.sp
-        )
+        Spacer(modifier = Modifier.width(16.dp))
+        Column {
+            Text(
+                text = number,
+                style = MaterialTheme.typography.titleLarge,
+                color = Color.White,
+                fontWeight = FontWeight.Bold
+            )
+            Text(
+                text = label,
+                style = MaterialTheme.typography.labelSmall,
+                color = Color.White.copy(alpha = 0.5f),
+                letterSpacing = 1.sp
+            )
+        }
     }
 }

@@ -1,6 +1,7 @@
 package com.example.ribeirosoaresadvogados.ui
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -12,6 +13,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import com.example.ribeirosoaresadvogados.data.PracticeArea
 import com.example.ribeirosoaresadvogados.ui.adaptive.AdaptiveListDetailScaffold
 import com.example.ribeirosoaresadvogados.ui.components.HeroSection
@@ -41,26 +43,24 @@ fun HomeContent(
     onContactUs: () -> Unit,
     onMenuClick: () -> Unit
 ) {
-    Scaffold(
-        modifier = Modifier.fillMaxSize(),
-        topBar = { 
-            TopNavBar(
-                onMenuClick = onMenuClick,
-                onContactClick = onContactUs
-            ) 
-        }
-    ) { innerPadding ->
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color(0xFF050709))
+    ) {
         LazyColumn(
-            modifier = Modifier
-                .padding(innerPadding)
-                .fillMaxSize()
-                .background(MaterialTheme.colorScheme.background)
+            modifier = Modifier.fillMaxSize()
         ) {
             item {
-                HeroSection(
-                    onExploreServices = onExploreServices,
-                    onContactUs = onContactUs
-                )
+                Box {
+                    HeroSection(
+                        onExploreServices = onExploreServices,
+                        onContactUs = onContactUs
+                    )
+                    TopNavBar(
+                        onContactClick = onContactUs
+                    )
+                }
             }
             
             item {
